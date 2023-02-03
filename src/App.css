@@ -1,38 +1,76 @@
+body{
+  background-color: #483D8B;
+  color: #fff;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2{
+  margin: 25px 0 25px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input{
+  margin: 0 0 25px 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task__background{
+  background-color: #7B68EE;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 10px 140px 10px 15px;
+  text-align: left;
+  font-size: 22px;
+  position: relative;
+}
+
+.task__background div{
   display: flex;
-  flex-direction: column;
+  align-items: center;
+}
+
+.task__number{
+  background-color: orange;
+  color: black;
+  border: 1px solid orange;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  text-align: center;
+  font-size: 14px;
+  margin-right: 8px;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.task__background .task__text{
+  flex: 1;
+}
+
+.task__background .done .task__text{
   color: white;
+  text-decoration: line-through;
+  opacity: 0.3;
 }
 
-.App-link {
-  color: #61dafb;
+.task__background .icons__wrap{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 15px;
+  width: auto;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task__background .icons__wrap span {
+  display: inline-block;
+  margin: 0 10px 0 10px;
+  cursor: pointer;
+  color: #00ff89;
+}
+
+.task__background .icons__wrap span:hover{
+  color: yellow;
 }
